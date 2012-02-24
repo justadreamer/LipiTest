@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4442846214F7B16F00135CB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4442846114F7B16F00135CB6 /* UIKit.framework */; };
+		4442846414F7B16F00135CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4442846314F7B16F00135CB6 /* Foundation.framework */; };
+		4442846614F7B16F00135CB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4442846514F7B16F00135CB6 /* CoreGraphics.framework */; };
+		4442846C14F7B16F00135CB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4442846A14F7B16F00135CB6 /* InfoPlist.strings */; };
+		4442846E14F7B16F00135CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442846D14F7B16F00135CB6 /* main.m */; };
+		4442847214F7B16F00135CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442847114F7B16F00135CB6 /* AppDelegate.m */; };
+		4442847514F7B16F00135CB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442847414F7B16F00135CB6 /* ViewController.m */; };
+		4442847814F7B17000135CB6 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847614F7B17000135CB6 /* ViewController_iPhone.xib */; };
+		4442847B14F7B17000135CB6 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847914F7B17000135CB6 /* ViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4442845D14F7B16F00135CB6 /* LipiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4442846114F7B16F00135CB6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4442846314F7B16F00135CB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4442846514F7B16F00135CB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4442846914F7B16F00135CB6 /* LipiTest-Info.plist */ = {isa = PBXFileReference; path = "LipiTest-Info.plist"; sourceTree = "<group>"; };
+		4442846B14F7B16F00135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4442846D14F7B16F00135CB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4442846F14F7B16F00135CB6 /* LipiTest-Prefix.pch */ = {isa = PBXFileReference; path = "LipiTest-Prefix.pch"; sourceTree = "<group>"; };
+		4442847014F7B16F00135CB6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		4442847114F7B16F00135CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4442847314F7B16F00135CB6 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		4442847414F7B16F00135CB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4442847714F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		4442847A14F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4442845A14F7B16F00135CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442846214F7B16F00135CB6 /* UIKit.framework in Frameworks */,
+				4442846414F7B16F00135CB6 /* Foundation.framework in Frameworks */,
+				4442846614F7B16F00135CB6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4442845214F7B16F00135CB6 = {
+			isa = PBXGroup;
+			children = (
+				4442846714F7B16F00135CB6 /* LipiTest */,
+				4442846014F7B16F00135CB6 /* Frameworks */,
+				4442845E14F7B16F00135CB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4442845E14F7B16F00135CB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4442845D14F7B16F00135CB6 /* LipiTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4442846014F7B16F00135CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4442846114F7B16F00135CB6 /* UIKit.framework */,
+				4442846314F7B16F00135CB6 /* Foundation.framework */,
+				4442846514F7B16F00135CB6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4442846714F7B16F00135CB6 /* LipiTest */ = {
+			isa = PBXGroup;
+			children = (
+				4442847014F7B16F00135CB6 /* AppDelegate.h */,
+				4442847114F7B16F00135CB6 /* AppDelegate.m */,
+				4442847314F7B16F00135CB6 /* ViewController.h */,
+				4442847414F7B16F00135CB6 /* ViewController.m */,
+				4442847614F7B17000135CB6 /* ViewController_iPhone.xib */,
+				4442847914F7B17000135CB6 /* ViewController_iPad.xib */,
+				4442846814F7B16F00135CB6 /* Supporting Files */,
+			);
+			path = LipiTest;
+			sourceTree = "<group>";
+		};
+		4442846814F7B16F00135CB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4442846914F7B16F00135CB6 /* LipiTest-Info.plist */,
+				4442846A14F7B16F00135CB6 /* InfoPlist.strings */,
+				4442846D14F7B16F00135CB6 /* main.m */,
+				4442846F14F7B16F00135CB6 /* LipiTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4442845C14F7B16F00135CB6 /* LipiTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4442847E14F7B17000135CB6 /* Build configuration list for PBXNativeTarget "LipiTest" */;
+			buildPhases = (
+				4442845914F7B16F00135CB6 /* Sources */,
+				4442845A14F7B16F00135CB6 /* Frameworks */,
+				4442845B14F7B16F00135CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LipiTest;
+			productName = LipiTest;
+			productReference = 4442845D14F7B16F00135CB6 /* LipiTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4442845414F7B16F00135CB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4442845714F7B16F00135CB6 /* Build configuration list for PBXProject "LipiTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4442845214F7B16F00135CB6;
+			productRefGroup = 4442845E14F7B16F00135CB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4442845C14F7B16F00135CB6 /* LipiTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4442845B14F7B16F00135CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442846C14F7B16F00135CB6 /* InfoPlist.strings in Resources */,
+				4442847814F7B17000135CB6 /* ViewController_iPhone.xib in Resources */,
+				4442847B14F7B17000135CB6 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4442845914F7B16F00135CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442846E14F7B16F00135CB6 /* main.m in Sources */,
+				4442847214F7B16F00135CB6 /* AppDelegate.m in Sources */,
+				4442847514F7B16F00135CB6 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4442846A14F7B16F00135CB6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4442846B14F7B16F00135CB6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4442847614F7B17000135CB6 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4442847714F7B17000135CB6 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		4442847914F7B17000135CB6 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4442847A14F7B17000135CB6 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4442847C14F7B17000135CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4442847D14F7B17000135CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4442847F14F7B17000135CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LipiTest/LipiTest-Prefix.pch";
+				INFOPLIST_FILE = "LipiTest/LipiTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4442848014F7B17000135CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LipiTest/LipiTest-Prefix.pch";
+				INFOPLIST_FILE = "LipiTest/LipiTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4442845714F7B16F00135CB6 /* Build configuration list for PBXProject "LipiTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4442847C14F7B17000135CB6 /* Debug */,
+				4442847D14F7B17000135CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4442847E14F7B17000135CB6 /* Build configuration list for PBXNativeTarget "LipiTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4442847F14F7B17000135CB6 /* Debug */,
+				4442848014F7B17000135CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4442845414F7B16F00135CB6 /* Project object */;
+}
