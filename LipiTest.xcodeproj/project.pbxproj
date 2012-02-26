@@ -13,9 +13,61 @@
 		4442846C14F7B16F00135CB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4442846A14F7B16F00135CB6 /* InfoPlist.strings */; };
 		4442846E14F7B16F00135CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442846D14F7B16F00135CB6 /* main.m */; };
 		4442847214F7B16F00135CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442847114F7B16F00135CB6 /* AppDelegate.m */; };
-		4442847514F7B16F00135CB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442847414F7B16F00135CB6 /* ViewController.m */; };
+		4442847514F7B16F00135CB6 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4442847414F7B16F00135CB6 /* ViewController.mm */; };
 		4442847814F7B17000135CB6 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847614F7B17000135CB6 /* ViewController_iPhone.xib */; };
 		4442847B14F7B17000135CB6 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847914F7B17000135CB6 /* ViewController_iPad.xib */; };
+		4442866314F7D07500135CB6 /* lipiengine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442860014F7D07400135CB6 /* lipiengine.cpp */; };
+		4442866414F7D07500135CB6 /* lipiengine.def in Resources */ = {isa = PBXBuildFile; fileRef = 4442860114F7D07400135CB6 /* lipiengine.def */; };
+		4442866514F7D07500135CB6 /* LipiEngineModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442860314F7D07400135CB6 /* LipiEngineModule.cpp */; };
+		4442866C14F7D07500135CB6 /* LTKShapeRecoConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442861514F7D07400135CB6 /* LTKShapeRecoConfig.cpp */; };
+		4442866D14F7D07500135CB6 /* LTKShapeRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442861614F7D07400135CB6 /* LTKShapeRecognizer.cpp */; };
+		4442866E14F7D07500135CB6 /* LTKShapeRecoResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442861714F7D07400135CB6 /* LTKShapeRecoResult.cpp */; };
+		4442866F14F7D07500135CB6 /* LTKShapeRecoUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442861814F7D07400135CB6 /* LTKShapeRecoUtil.cpp */; };
+		4442867014F7D07500135CB6 /* LTKShapeSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442861914F7D07400135CB6 /* LTKShapeSample.cpp */; };
+		4442867114F7D07500135CB6 /* LTKShapeFeatureExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442861E14F7D07400135CB6 /* LTKShapeFeatureExtractor.cpp */; };
+		4442867214F7D07500135CB6 /* LTKShapeFeatureExtractorFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442862014F7D07400135CB6 /* LTKShapeFeatureExtractorFactory.cpp */; };
+		4442867B14F7D07500135CB6 /* PointFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442863314F7D07400135CB6 /* PointFloat.cpp */; };
+		4442867C14F7D07500135CB6 /* PointFloat.def in Resources */ = {isa = PBXBuildFile; fileRef = 4442863414F7D07400135CB6 /* PointFloat.def */; };
+		4442867D14F7D07500135CB6 /* PointFloatShapeFeature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442863614F7D07400135CB6 /* PointFloatShapeFeature.cpp */; };
+		4442867E14F7D07500135CB6 /* PointFloatShapeFeatureExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442863814F7D07400135CB6 /* PointFloatShapeFeatureExtractor.cpp */; };
+		4442868714F7D07500135CB6 /* nn.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 4442864A14F7D07400135CB6 /* nn.cfg */; };
+		4442868814F7D07500135CB6 /* NN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442864B14F7D07400135CB6 /* NN.cpp */; };
+		4442868914F7D07500135CB6 /* NN.def in Resources */ = {isa = PBXBuildFile; fileRef = 4442864C14F7D07400135CB6 /* NN.def */; };
+		4442868A14F7D07500135CB6 /* NNAdapt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442864E14F7D07400135CB6 /* NNAdapt.cpp */; };
+		4442868B14F7D07500135CB6 /* NNShapeRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442865014F7D07400135CB6 /* NNShapeRecognizer.cpp */; };
+		4442868C14F7D07500135CB6 /* LTKPreprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442865314F7D07400135CB6 /* LTKPreprocessor.cpp */; };
+		4442868D14F7D07500135CB6 /* preprocessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442865414F7D07400135CB6 /* preprocessing.cpp */; };
+		4442868E14F7D07500135CB6 /* preprocessing.def in Resources */ = {isa = PBXBuildFile; fileRef = 4442865514F7D07400135CB6 /* preprocessing.def */; };
+		4442868F14F7D07500135CB6 /* BoxFieldRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442865914F7D07400135CB6 /* BoxFieldRecognizer.cpp */; };
+		4442869014F7D07500135CB6 /* boxfld.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 4442865B14F7D07400135CB6 /* boxfld.cfg */; };
+		4442869114F7D07500135CB6 /* boxfld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442865C14F7D07400135CB6 /* boxfld.cpp */; };
+		4442869214F7D07500135CB6 /* boxfld.def in Resources */ = {isa = PBXBuildFile; fileRef = 4442865D14F7D07400135CB6 /* boxfld.def */; };
+		4442869314F7D07500135CB6 /* LTKRecognitionContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442866014F7D07400135CB6 /* LTKRecognitionContext.cpp */; };
+		4442869414F7D07500135CB6 /* LTKWordRecoConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442866114F7D07400135CB6 /* LTKWordRecoConfig.cpp */; };
+		4442869514F7D07500135CB6 /* LTKWordRecoResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442866214F7D07400135CB6 /* LTKWordRecoResult.cpp */; };
+		444286C514F7D18C00135CB6 /* LTKCaptureDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286BC14F7D18C00135CB6 /* LTKCaptureDevice.cpp */; };
+		444286C614F7D18C00135CB6 /* LTKChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286BD14F7D18C00135CB6 /* LTKChannel.cpp */; };
+		444286C714F7D18C00135CB6 /* LTKException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286BE14F7D18C00135CB6 /* LTKException.cpp */; };
+		444286C814F7D18C00135CB6 /* LTKScreenContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286BF14F7D18C00135CB6 /* LTKScreenContext.cpp */; };
+		444286C914F7D18C00135CB6 /* LTKTrace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286C014F7D18C00135CB6 /* LTKTrace.cpp */; };
+		444286CA14F7D18C00135CB6 /* LTKTraceFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286C114F7D18C00135CB6 /* LTKTraceFormat.cpp */; };
+		444286CB14F7D18C00135CB6 /* LTKTraceGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286C214F7D18C00135CB6 /* LTKTraceGroup.cpp */; };
+		444286F214F7D1AE00135CB6 /* LTKCheckSumGenerate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286D114F7D1AE00135CB6 /* LTKCheckSumGenerate.cpp */; };
+		444286F314F7D1AE00135CB6 /* LTKConfigFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286D314F7D1AE00135CB6 /* LTKConfigFileReader.cpp */; };
+		444286F414F7D1AE00135CB6 /* LTKErrors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286D614F7D1AE00135CB6 /* LTKErrors.cpp */; };
+		444286F514F7D1AE00135CB6 /* LTKImageWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286D914F7D1AE00135CB6 /* LTKImageWriter.cpp */; };
+		444286F614F7D1AE00135CB6 /* LTKInkFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286DB14F7D1AE00135CB6 /* LTKInkFileReader.cpp */; };
+		444286F714F7D1AE00135CB6 /* LTKInkFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286DD14F7D1AE00135CB6 /* LTKInkFileWriter.cpp */; };
+		444286F814F7D1AE00135CB6 /* LTKInkUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286DF14F7D1AE00135CB6 /* LTKInkUtils.cpp */; };
+		444286F914F7D1AE00135CB6 /* LTKLinuxUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E114F7D1AE00135CB6 /* LTKLinuxUtil.cpp */; };
+		444286FA14F7D1AE00135CB6 /* LTKLoggerUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E314F7D1AE00135CB6 /* LTKLoggerUtil.cpp */; };
+		444286FB14F7D1AE00135CB6 /* LTKOSUtilFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E514F7D1AE00135CB6 /* LTKOSUtilFactory.cpp */; };
+		444286FC14F7D1AE00135CB6 /* LTKStrEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E614F7D1AE00135CB6 /* LTKStrEncoding.cpp */; };
+		444286FD14F7D1AE00135CB6 /* LTKStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E814F7D1AE00135CB6 /* LTKStringUtil.cpp */; };
+		444286FE14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286EA14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp */; };
+		4442870314F7F11E00135CB6 /* FilesConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442870214F7F11D00135CB6 /* FilesConfigurator.m */; };
+		4442876A14F83D1A00135CB6 /* projects in Resources */ = {isa = PBXBuildFile; fileRef = 4442876914F83D1A00135CB6 /* projects */; };
+		4442877514F8584C00135CB6 /* GTVTransparentTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4442877414F8584C00135CB6 /* GTVTransparentTouchView.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +75,135 @@
 		4442846114F7B16F00135CB6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4442846314F7B16F00135CB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4442846514F7B16F00135CB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4442846914F7B16F00135CB6 /* LipiTest-Info.plist */ = {isa = PBXFileReference; path = "LipiTest-Info.plist"; sourceTree = "<group>"; };
+		4442846914F7B16F00135CB6 /* LipiTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LipiTest-Info.plist"; sourceTree = "<group>"; };
 		4442846B14F7B16F00135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4442846D14F7B16F00135CB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4442846F14F7B16F00135CB6 /* LipiTest-Prefix.pch */ = {isa = PBXFileReference; path = "LipiTest-Prefix.pch"; sourceTree = "<group>"; };
-		4442847014F7B16F00135CB6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		4442846F14F7B16F00135CB6 /* LipiTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LipiTest-Prefix.pch"; sourceTree = "<group>"; };
+		4442847014F7B16F00135CB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4442847114F7B16F00135CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4442847314F7B16F00135CB6 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		4442847414F7B16F00135CB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4442847314F7B16F00135CB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4442847414F7B16F00135CB6 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		4442847714F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		4442847A14F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		4442860014F7D07400135CB6 /* lipiengine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lipiengine.cpp; sourceTree = "<group>"; };
+		4442860114F7D07400135CB6 /* lipiengine.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lipiengine.def; sourceTree = "<group>"; };
+		4442860214F7D07400135CB6 /* lipiengine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lipiengine.h; sourceTree = "<group>"; };
+		4442860314F7D07400135CB6 /* LipiEngineModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LipiEngineModule.cpp; sourceTree = "<group>"; };
+		4442860414F7D07400135CB6 /* LipiEngineModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LipiEngineModule.h; sourceTree = "<group>"; };
+		4442860514F7D07400135CB6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		4442861514F7D07400135CB6 /* LTKShapeRecoConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeRecoConfig.cpp; sourceTree = "<group>"; };
+		4442861614F7D07400135CB6 /* LTKShapeRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeRecognizer.cpp; sourceTree = "<group>"; };
+		4442861714F7D07400135CB6 /* LTKShapeRecoResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeRecoResult.cpp; sourceTree = "<group>"; };
+		4442861814F7D07400135CB6 /* LTKShapeRecoUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeRecoUtil.cpp; sourceTree = "<group>"; };
+		4442861914F7D07400135CB6 /* LTKShapeSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeSample.cpp; sourceTree = "<group>"; };
+		4442861A14F7D07400135CB6 /* LTKShapeSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeSample.h; sourceTree = "<group>"; };
+		4442861D14F7D07400135CB6 /* LTKShapeFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeFeature.h; sourceTree = "<group>"; };
+		4442861E14F7D07400135CB6 /* LTKShapeFeatureExtractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeFeatureExtractor.cpp; sourceTree = "<group>"; };
+		4442861F14F7D07400135CB6 /* LTKShapeFeatureExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeFeatureExtractor.h; sourceTree = "<group>"; };
+		4442862014F7D07400135CB6 /* LTKShapeFeatureExtractorFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKShapeFeatureExtractorFactory.cpp; sourceTree = "<group>"; };
+		4442862114F7D07400135CB6 /* LTKShapeFeatureExtractorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeFeatureExtractorFactory.h; sourceTree = "<group>"; };
+		4442863314F7D07400135CB6 /* PointFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointFloat.cpp; sourceTree = "<group>"; };
+		4442863414F7D07400135CB6 /* PointFloat.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PointFloat.def; sourceTree = "<group>"; };
+		4442863514F7D07400135CB6 /* PointFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointFloat.h; sourceTree = "<group>"; };
+		4442863614F7D07400135CB6 /* PointFloatShapeFeature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointFloatShapeFeature.cpp; sourceTree = "<group>"; };
+		4442863714F7D07400135CB6 /* PointFloatShapeFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointFloatShapeFeature.h; sourceTree = "<group>"; };
+		4442863814F7D07400135CB6 /* PointFloatShapeFeatureExtractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointFloatShapeFeatureExtractor.cpp; sourceTree = "<group>"; };
+		4442863914F7D07400135CB6 /* PointFloatShapeFeatureExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointFloatShapeFeatureExtractor.h; sourceTree = "<group>"; };
+		4442864A14F7D07400135CB6 /* nn.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nn.cfg; sourceTree = "<group>"; };
+		4442864B14F7D07400135CB6 /* NN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NN.cpp; sourceTree = "<group>"; };
+		4442864C14F7D07400135CB6 /* NN.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NN.def; sourceTree = "<group>"; };
+		4442864D14F7D07400135CB6 /* NN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NN.h; sourceTree = "<group>"; };
+		4442864E14F7D07400135CB6 /* NNAdapt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NNAdapt.cpp; sourceTree = "<group>"; };
+		4442864F14F7D07400135CB6 /* NNAdapt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAdapt.h; sourceTree = "<group>"; };
+		4442865014F7D07400135CB6 /* NNShapeRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NNShapeRecognizer.cpp; sourceTree = "<group>"; };
+		4442865114F7D07400135CB6 /* NNShapeRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNShapeRecognizer.h; sourceTree = "<group>"; };
+		4442865314F7D07400135CB6 /* LTKPreprocessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKPreprocessor.cpp; sourceTree = "<group>"; };
+		4442865414F7D07400135CB6 /* preprocessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = preprocessing.cpp; sourceTree = "<group>"; };
+		4442865514F7D07400135CB6 /* preprocessing.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = preprocessing.def; sourceTree = "<group>"; };
+		4442865614F7D07400135CB6 /* preprocessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preprocessing.h; sourceTree = "<group>"; };
+		4442865914F7D07400135CB6 /* BoxFieldRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxFieldRecognizer.cpp; sourceTree = "<group>"; };
+		4442865A14F7D07400135CB6 /* BoxFieldRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxFieldRecognizer.h; sourceTree = "<group>"; };
+		4442865B14F7D07400135CB6 /* boxfld.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = boxfld.cfg; sourceTree = "<group>"; };
+		4442865C14F7D07400135CB6 /* boxfld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = boxfld.cpp; sourceTree = "<group>"; };
+		4442865D14F7D07400135CB6 /* boxfld.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = boxfld.def; sourceTree = "<group>"; };
+		4442865E14F7D07400135CB6 /* boxfld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boxfld.h; sourceTree = "<group>"; };
+		4442866014F7D07400135CB6 /* LTKRecognitionContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKRecognitionContext.cpp; sourceTree = "<group>"; };
+		4442866114F7D07400135CB6 /* LTKWordRecoConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKWordRecoConfig.cpp; sourceTree = "<group>"; };
+		4442866214F7D07400135CB6 /* LTKWordRecoResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKWordRecoResult.cpp; sourceTree = "<group>"; };
+		4442869714F7D16400135CB6 /* LTKCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKCaptureDevice.h; sourceTree = "<group>"; };
+		4442869814F7D16400135CB6 /* LTKChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKChannel.h; sourceTree = "<group>"; };
+		4442869914F7D16400135CB6 /* LTKClassifierDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKClassifierDefaults.h; sourceTree = "<group>"; };
+		4442869A14F7D16400135CB6 /* LTKErrorsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKErrorsList.h; sourceTree = "<group>"; };
+		4442869B14F7D16400135CB6 /* LTKException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKException.h; sourceTree = "<group>"; };
+		4442869C14F7D16400135CB6 /* LTKInc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKInc.h; sourceTree = "<group>"; };
+		4442869D14F7D16400135CB6 /* LTKLipiEngineInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKLipiEngineInterface.h; sourceTree = "<group>"; };
+		4442869E14F7D16400135CB6 /* LTKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKLogger.h; sourceTree = "<group>"; };
+		4442869F14F7D16400135CB6 /* LTKLoggerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKLoggerInterface.h; sourceTree = "<group>"; };
+		444286A014F7D16400135CB6 /* LTKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKMacros.h; sourceTree = "<group>"; };
+		444286A114F7D16400135CB6 /* LTKOSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKOSUtil.h; sourceTree = "<group>"; };
+		444286A214F7D16400135CB6 /* LTKOSUtilFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKOSUtilFactory.h; sourceTree = "<group>"; };
+		444286A314F7D16400135CB6 /* LTKPreprocDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKPreprocDefaults.h; sourceTree = "<group>"; };
+		444286A414F7D16400135CB6 /* LTKPreprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKPreprocessor.h; sourceTree = "<group>"; };
+		444286A514F7D16400135CB6 /* LTKPreprocessorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKPreprocessorInterface.h; sourceTree = "<group>"; };
+		444286A614F7D16400135CB6 /* LTKRecognitionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKRecognitionContext.h; sourceTree = "<group>"; };
+		444286A714F7D16400135CB6 /* LTKRefCountedPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKRefCountedPtr.h; sourceTree = "<group>"; };
+		444286A814F7D16400135CB6 /* LTKScreenContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKScreenContext.h; sourceTree = "<group>"; };
+		444286A914F7D16400135CB6 /* LTKShapeFeatureMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeFeatureMacros.h; sourceTree = "<group>"; };
+		444286AA14F7D16400135CB6 /* LTKShapeRecoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeRecoConfig.h; sourceTree = "<group>"; };
+		444286AB14F7D16400135CB6 /* LTKShapeRecoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeRecoEngine.h; sourceTree = "<group>"; };
+		444286AC14F7D16400135CB6 /* LTKShapeRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeRecognizer.h; sourceTree = "<group>"; };
+		444286AD14F7D16400135CB6 /* LTKShapeRecoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeRecoResult.h; sourceTree = "<group>"; };
+		444286AE14F7D16400135CB6 /* LTKShapeRecoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKShapeRecoUtil.h; sourceTree = "<group>"; };
+		444286AF14F7D16400135CB6 /* LTKTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKTrace.h; sourceTree = "<group>"; };
+		444286B014F7D16400135CB6 /* LTKTraceFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKTraceFormat.h; sourceTree = "<group>"; };
+		444286B114F7D16400135CB6 /* LTKTraceGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKTraceGroup.h; sourceTree = "<group>"; };
+		444286B214F7D16400135CB6 /* LTKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKTypes.h; sourceTree = "<group>"; };
+		444286B314F7D16400135CB6 /* LTKWordRecoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKWordRecoConfig.h; sourceTree = "<group>"; };
+		444286B414F7D16400135CB6 /* LTKWordRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKWordRecognizer.h; sourceTree = "<group>"; };
+		444286B514F7D16400135CB6 /* LTKWordRecoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKWordRecoResult.h; sourceTree = "<group>"; };
+		444286B614F7D16400135CB6 /* TpcError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TpcError.h; sourceTree = "<group>"; };
+		444286BC14F7D18C00135CB6 /* LTKCaptureDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKCaptureDevice.cpp; sourceTree = "<group>"; };
+		444286BD14F7D18C00135CB6 /* LTKChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKChannel.cpp; sourceTree = "<group>"; };
+		444286BE14F7D18C00135CB6 /* LTKException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKException.cpp; sourceTree = "<group>"; };
+		444286BF14F7D18C00135CB6 /* LTKScreenContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKScreenContext.cpp; sourceTree = "<group>"; };
+		444286C014F7D18C00135CB6 /* LTKTrace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKTrace.cpp; sourceTree = "<group>"; };
+		444286C114F7D18C00135CB6 /* LTKTraceFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKTraceFormat.cpp; sourceTree = "<group>"; };
+		444286C214F7D18C00135CB6 /* LTKTraceGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKTraceGroup.cpp; sourceTree = "<group>"; };
+		444286D114F7D1AE00135CB6 /* LTKCheckSumGenerate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKCheckSumGenerate.cpp; sourceTree = "<group>"; };
+		444286D214F7D1AE00135CB6 /* LTKCheckSumGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKCheckSumGenerate.h; sourceTree = "<group>"; };
+		444286D314F7D1AE00135CB6 /* LTKConfigFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKConfigFileReader.cpp; sourceTree = "<group>"; };
+		444286D414F7D1AE00135CB6 /* LTKConfigFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKConfigFileReader.h; sourceTree = "<group>"; };
+		444286D514F7D1AE00135CB6 /* LTKDynamicTimeWarping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKDynamicTimeWarping.h; sourceTree = "<group>"; };
+		444286D614F7D1AE00135CB6 /* LTKErrors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKErrors.cpp; sourceTree = "<group>"; };
+		444286D714F7D1AE00135CB6 /* LTKErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKErrors.h; sourceTree = "<group>"; };
+		444286D814F7D1AE00135CB6 /* LTKHierarchicalClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKHierarchicalClustering.h; sourceTree = "<group>"; };
+		444286D914F7D1AE00135CB6 /* LTKImageWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKImageWriter.cpp; sourceTree = "<group>"; };
+		444286DA14F7D1AE00135CB6 /* LTKImageWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKImageWriter.h; sourceTree = "<group>"; };
+		444286DB14F7D1AE00135CB6 /* LTKInkFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKInkFileReader.cpp; sourceTree = "<group>"; };
+		444286DC14F7D1AE00135CB6 /* LTKInkFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKInkFileReader.h; sourceTree = "<group>"; };
+		444286DD14F7D1AE00135CB6 /* LTKInkFileWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKInkFileWriter.cpp; sourceTree = "<group>"; };
+		444286DE14F7D1AE00135CB6 /* LTKInkFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKInkFileWriter.h; sourceTree = "<group>"; };
+		444286DF14F7D1AE00135CB6 /* LTKInkUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKInkUtils.cpp; sourceTree = "<group>"; };
+		444286E014F7D1AE00135CB6 /* LTKInkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKInkUtils.h; sourceTree = "<group>"; };
+		444286E114F7D1AE00135CB6 /* LTKLinuxUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKLinuxUtil.cpp; sourceTree = "<group>"; };
+		444286E214F7D1AE00135CB6 /* LTKLinuxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKLinuxUtil.h; sourceTree = "<group>"; };
+		444286E314F7D1AE00135CB6 /* LTKLoggerUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKLoggerUtil.cpp; sourceTree = "<group>"; };
+		444286E414F7D1AE00135CB6 /* LTKLoggerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKLoggerUtil.h; sourceTree = "<group>"; };
+		444286E514F7D1AE00135CB6 /* LTKOSUtilFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKOSUtilFactory.cpp; sourceTree = "<group>"; };
+		444286E614F7D1AE00135CB6 /* LTKStrEncoding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKStrEncoding.cpp; sourceTree = "<group>"; };
+		444286E714F7D1AE00135CB6 /* LTKStrEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKStrEncoding.h; sourceTree = "<group>"; };
+		444286E814F7D1AE00135CB6 /* LTKStringUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKStringUtil.cpp; sourceTree = "<group>"; };
+		444286E914F7D1AE00135CB6 /* LTKStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKStringUtil.h; sourceTree = "<group>"; };
+		444286EA14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKVersionCompatibilityCheck.cpp; sourceTree = "<group>"; };
+		444286EB14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKVersionCompatibilityCheck.h; sourceTree = "<group>"; };
+		4442870114F7F11D00135CB6 /* FilesConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesConfigurator.h; sourceTree = "<group>"; };
+		4442870214F7F11D00135CB6 /* FilesConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesConfigurator.m; sourceTree = "<group>"; };
+		4442876914F83D1A00135CB6 /* projects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = projects; sourceTree = "<group>"; };
+		4442876B14F83DC400135CB6 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		4442876C14F83E0700135CB6 /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLog.h; sourceTree = "<group>"; };
+		4442877214F8584C00135CB6 /* GTVGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVGlobals.h; sourceTree = "<group>"; };
+		4442877314F8584C00135CB6 /* GTVTransparentTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVTransparentTouchView.h; sourceTree = "<group>"; };
+		4442877414F8584C00135CB6 /* GTVTransparentTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GTVTransparentTouchView.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +250,20 @@
 		4442846714F7B16F00135CB6 /* LipiTest */ = {
 			isa = PBXGroup;
 			children = (
+				4442877114F8584900135CB6 /* GestureTouchView */,
+				4442876C14F83E0700135CB6 /* DLog.h */,
+				4442870414F80F5300135CB6 /* res */,
+				444284FB14F7CE3A00135CB6 /* lipi-core */,
 				4442847014F7B16F00135CB6 /* AppDelegate.h */,
 				4442847114F7B16F00135CB6 /* AppDelegate.m */,
 				4442847314F7B16F00135CB6 /* ViewController.h */,
-				4442847414F7B16F00135CB6 /* ViewController.m */,
+				4442847414F7B16F00135CB6 /* ViewController.mm */,
 				4442847614F7B17000135CB6 /* ViewController_iPhone.xib */,
 				4442847914F7B17000135CB6 /* ViewController_iPad.xib */,
 				4442846814F7B16F00135CB6 /* Supporting Files */,
+				4442870114F7F11D00135CB6 /* FilesConfigurator.h */,
+				4442870214F7F11D00135CB6 /* FilesConfigurator.m */,
+				4442876B14F83DC400135CB6 /* Global.h */,
 			);
 			path = LipiTest;
 			sourceTree = "<group>";
@@ -99,6 +277,262 @@
 				4442846F14F7B16F00135CB6 /* LipiTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		444284FB14F7CE3A00135CB6 /* lipi-core */ = {
+			isa = PBXGroup;
+			children = (
+				444286CC14F7D1AE00135CB6 /* lib */,
+				444286B714F7D18C00135CB6 /* common */,
+				4442869614F7D16400135CB6 /* include */,
+				444285FF14F7D07400135CB6 /* lipiengine */,
+				4442860614F7D07400135CB6 /* reco */,
+			);
+			path = "lipi-core";
+			sourceTree = "<group>";
+		};
+		444285FF14F7D07400135CB6 /* lipiengine */ = {
+			isa = PBXGroup;
+			children = (
+				4442860014F7D07400135CB6 /* lipiengine.cpp */,
+				4442860114F7D07400135CB6 /* lipiengine.def */,
+				4442860214F7D07400135CB6 /* lipiengine.h */,
+				4442860314F7D07400135CB6 /* LipiEngineModule.cpp */,
+				4442860414F7D07400135CB6 /* LipiEngineModule.h */,
+				4442860514F7D07400135CB6 /* version.h */,
+			);
+			path = lipiengine;
+			sourceTree = "<group>";
+		};
+		4442860614F7D07400135CB6 /* reco */ = {
+			isa = PBXGroup;
+			children = (
+				4442860714F7D07400135CB6 /* shaperec */,
+				4442865714F7D07400135CB6 /* wordrec */,
+			);
+			path = reco;
+			sourceTree = "<group>";
+		};
+		4442860714F7D07400135CB6 /* shaperec */ = {
+			isa = PBXGroup;
+			children = (
+				4442861414F7D07400135CB6 /* common */,
+				4442861B14F7D07400135CB6 /* featureextractor */,
+				4442864914F7D07400135CB6 /* nn */,
+				4442865214F7D07400135CB6 /* preprocessing */,
+			);
+			path = shaperec;
+			sourceTree = "<group>";
+		};
+		4442861414F7D07400135CB6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				4442861514F7D07400135CB6 /* LTKShapeRecoConfig.cpp */,
+				4442861614F7D07400135CB6 /* LTKShapeRecognizer.cpp */,
+				4442861714F7D07400135CB6 /* LTKShapeRecoResult.cpp */,
+				4442861814F7D07400135CB6 /* LTKShapeRecoUtil.cpp */,
+				4442861914F7D07400135CB6 /* LTKShapeSample.cpp */,
+				4442861A14F7D07400135CB6 /* LTKShapeSample.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		4442861B14F7D07400135CB6 /* featureextractor */ = {
+			isa = PBXGroup;
+			children = (
+				4442861C14F7D07400135CB6 /* common */,
+				4442863214F7D07400135CB6 /* pointfloat */,
+			);
+			path = featureextractor;
+			sourceTree = "<group>";
+		};
+		4442861C14F7D07400135CB6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				4442861D14F7D07400135CB6 /* LTKShapeFeature.h */,
+				4442861E14F7D07400135CB6 /* LTKShapeFeatureExtractor.cpp */,
+				4442861F14F7D07400135CB6 /* LTKShapeFeatureExtractor.h */,
+				4442862014F7D07400135CB6 /* LTKShapeFeatureExtractorFactory.cpp */,
+				4442862114F7D07400135CB6 /* LTKShapeFeatureExtractorFactory.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		4442863214F7D07400135CB6 /* pointfloat */ = {
+			isa = PBXGroup;
+			children = (
+				4442863314F7D07400135CB6 /* PointFloat.cpp */,
+				4442863414F7D07400135CB6 /* PointFloat.def */,
+				4442863514F7D07400135CB6 /* PointFloat.h */,
+				4442863614F7D07400135CB6 /* PointFloatShapeFeature.cpp */,
+				4442863714F7D07400135CB6 /* PointFloatShapeFeature.h */,
+				4442863814F7D07400135CB6 /* PointFloatShapeFeatureExtractor.cpp */,
+				4442863914F7D07400135CB6 /* PointFloatShapeFeatureExtractor.h */,
+			);
+			path = pointfloat;
+			sourceTree = "<group>";
+		};
+		4442864914F7D07400135CB6 /* nn */ = {
+			isa = PBXGroup;
+			children = (
+				4442864A14F7D07400135CB6 /* nn.cfg */,
+				4442864B14F7D07400135CB6 /* NN.cpp */,
+				4442864C14F7D07400135CB6 /* NN.def */,
+				4442864D14F7D07400135CB6 /* NN.h */,
+				4442864E14F7D07400135CB6 /* NNAdapt.cpp */,
+				4442864F14F7D07400135CB6 /* NNAdapt.h */,
+				4442865014F7D07400135CB6 /* NNShapeRecognizer.cpp */,
+				4442865114F7D07400135CB6 /* NNShapeRecognizer.h */,
+			);
+			path = nn;
+			sourceTree = "<group>";
+		};
+		4442865214F7D07400135CB6 /* preprocessing */ = {
+			isa = PBXGroup;
+			children = (
+				4442865314F7D07400135CB6 /* LTKPreprocessor.cpp */,
+				4442865414F7D07400135CB6 /* preprocessing.cpp */,
+				4442865514F7D07400135CB6 /* preprocessing.def */,
+				4442865614F7D07400135CB6 /* preprocessing.h */,
+			);
+			path = preprocessing;
+			sourceTree = "<group>";
+		};
+		4442865714F7D07400135CB6 /* wordrec */ = {
+			isa = PBXGroup;
+			children = (
+				4442865814F7D07400135CB6 /* boxfld */,
+				4442865F14F7D07400135CB6 /* common */,
+			);
+			path = wordrec;
+			sourceTree = "<group>";
+		};
+		4442865814F7D07400135CB6 /* boxfld */ = {
+			isa = PBXGroup;
+			children = (
+				4442865914F7D07400135CB6 /* BoxFieldRecognizer.cpp */,
+				4442865A14F7D07400135CB6 /* BoxFieldRecognizer.h */,
+				4442865B14F7D07400135CB6 /* boxfld.cfg */,
+				4442865C14F7D07400135CB6 /* boxfld.cpp */,
+				4442865D14F7D07400135CB6 /* boxfld.def */,
+				4442865E14F7D07400135CB6 /* boxfld.h */,
+			);
+			path = boxfld;
+			sourceTree = "<group>";
+		};
+		4442865F14F7D07400135CB6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				4442866014F7D07400135CB6 /* LTKRecognitionContext.cpp */,
+				4442866114F7D07400135CB6 /* LTKWordRecoConfig.cpp */,
+				4442866214F7D07400135CB6 /* LTKWordRecoResult.cpp */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		4442869614F7D16400135CB6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4442869714F7D16400135CB6 /* LTKCaptureDevice.h */,
+				4442869814F7D16400135CB6 /* LTKChannel.h */,
+				4442869914F7D16400135CB6 /* LTKClassifierDefaults.h */,
+				4442869A14F7D16400135CB6 /* LTKErrorsList.h */,
+				4442869B14F7D16400135CB6 /* LTKException.h */,
+				4442869C14F7D16400135CB6 /* LTKInc.h */,
+				4442869D14F7D16400135CB6 /* LTKLipiEngineInterface.h */,
+				4442869E14F7D16400135CB6 /* LTKLogger.h */,
+				4442869F14F7D16400135CB6 /* LTKLoggerInterface.h */,
+				444286A014F7D16400135CB6 /* LTKMacros.h */,
+				444286A114F7D16400135CB6 /* LTKOSUtil.h */,
+				444286A214F7D16400135CB6 /* LTKOSUtilFactory.h */,
+				444286A314F7D16400135CB6 /* LTKPreprocDefaults.h */,
+				444286A414F7D16400135CB6 /* LTKPreprocessor.h */,
+				444286A514F7D16400135CB6 /* LTKPreprocessorInterface.h */,
+				444286A614F7D16400135CB6 /* LTKRecognitionContext.h */,
+				444286A714F7D16400135CB6 /* LTKRefCountedPtr.h */,
+				444286A814F7D16400135CB6 /* LTKScreenContext.h */,
+				444286A914F7D16400135CB6 /* LTKShapeFeatureMacros.h */,
+				444286AA14F7D16400135CB6 /* LTKShapeRecoConfig.h */,
+				444286AB14F7D16400135CB6 /* LTKShapeRecoEngine.h */,
+				444286AC14F7D16400135CB6 /* LTKShapeRecognizer.h */,
+				444286AD14F7D16400135CB6 /* LTKShapeRecoResult.h */,
+				444286AE14F7D16400135CB6 /* LTKShapeRecoUtil.h */,
+				444286AF14F7D16400135CB6 /* LTKTrace.h */,
+				444286B014F7D16400135CB6 /* LTKTraceFormat.h */,
+				444286B114F7D16400135CB6 /* LTKTraceGroup.h */,
+				444286B214F7D16400135CB6 /* LTKTypes.h */,
+				444286B314F7D16400135CB6 /* LTKWordRecoConfig.h */,
+				444286B414F7D16400135CB6 /* LTKWordRecognizer.h */,
+				444286B514F7D16400135CB6 /* LTKWordRecoResult.h */,
+				444286B614F7D16400135CB6 /* TpcError.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		444286B714F7D18C00135CB6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				444286BC14F7D18C00135CB6 /* LTKCaptureDevice.cpp */,
+				444286BD14F7D18C00135CB6 /* LTKChannel.cpp */,
+				444286BE14F7D18C00135CB6 /* LTKException.cpp */,
+				444286BF14F7D18C00135CB6 /* LTKScreenContext.cpp */,
+				444286C014F7D18C00135CB6 /* LTKTrace.cpp */,
+				444286C114F7D18C00135CB6 /* LTKTraceFormat.cpp */,
+				444286C214F7D18C00135CB6 /* LTKTraceGroup.cpp */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		444286CC14F7D1AE00135CB6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				444286D114F7D1AE00135CB6 /* LTKCheckSumGenerate.cpp */,
+				444286D214F7D1AE00135CB6 /* LTKCheckSumGenerate.h */,
+				444286D314F7D1AE00135CB6 /* LTKConfigFileReader.cpp */,
+				444286D414F7D1AE00135CB6 /* LTKConfigFileReader.h */,
+				444286D514F7D1AE00135CB6 /* LTKDynamicTimeWarping.h */,
+				444286D614F7D1AE00135CB6 /* LTKErrors.cpp */,
+				444286D714F7D1AE00135CB6 /* LTKErrors.h */,
+				444286D814F7D1AE00135CB6 /* LTKHierarchicalClustering.h */,
+				444286D914F7D1AE00135CB6 /* LTKImageWriter.cpp */,
+				444286DA14F7D1AE00135CB6 /* LTKImageWriter.h */,
+				444286DB14F7D1AE00135CB6 /* LTKInkFileReader.cpp */,
+				444286DC14F7D1AE00135CB6 /* LTKInkFileReader.h */,
+				444286DD14F7D1AE00135CB6 /* LTKInkFileWriter.cpp */,
+				444286DE14F7D1AE00135CB6 /* LTKInkFileWriter.h */,
+				444286DF14F7D1AE00135CB6 /* LTKInkUtils.cpp */,
+				444286E014F7D1AE00135CB6 /* LTKInkUtils.h */,
+				444286E114F7D1AE00135CB6 /* LTKLinuxUtil.cpp */,
+				444286E214F7D1AE00135CB6 /* LTKLinuxUtil.h */,
+				444286E314F7D1AE00135CB6 /* LTKLoggerUtil.cpp */,
+				444286E414F7D1AE00135CB6 /* LTKLoggerUtil.h */,
+				444286E514F7D1AE00135CB6 /* LTKOSUtilFactory.cpp */,
+				444286E614F7D1AE00135CB6 /* LTKStrEncoding.cpp */,
+				444286E714F7D1AE00135CB6 /* LTKStrEncoding.h */,
+				444286E814F7D1AE00135CB6 /* LTKStringUtil.cpp */,
+				444286E914F7D1AE00135CB6 /* LTKStringUtil.h */,
+				444286EA14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp */,
+				444286EB14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4442870414F80F5300135CB6 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				4442876914F83D1A00135CB6 /* projects */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		4442877114F8584900135CB6 /* GestureTouchView */ = {
+			isa = PBXGroup;
+			children = (
+				4442877214F8584C00135CB6 /* GTVGlobals.h */,
+				4442877314F8584C00135CB6 /* GTVTransparentTouchView.h */,
+				4442877414F8584C00135CB6 /* GTVTransparentTouchView.mm */,
+			);
+			path = GestureTouchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +588,14 @@
 				4442846C14F7B16F00135CB6 /* InfoPlist.strings in Resources */,
 				4442847814F7B17000135CB6 /* ViewController_iPhone.xib in Resources */,
 				4442847B14F7B17000135CB6 /* ViewController_iPad.xib in Resources */,
+				4442866414F7D07500135CB6 /* lipiengine.def in Resources */,
+				4442867C14F7D07500135CB6 /* PointFloat.def in Resources */,
+				4442868714F7D07500135CB6 /* nn.cfg in Resources */,
+				4442868914F7D07500135CB6 /* NN.def in Resources */,
+				4442868E14F7D07500135CB6 /* preprocessing.def in Resources */,
+				4442869014F7D07500135CB6 /* boxfld.cfg in Resources */,
+				4442869214F7D07500135CB6 /* boxfld.def in Resources */,
+				4442876A14F83D1A00135CB6 /* projects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +608,51 @@
 			files = (
 				4442846E14F7B16F00135CB6 /* main.m in Sources */,
 				4442847214F7B16F00135CB6 /* AppDelegate.m in Sources */,
-				4442847514F7B16F00135CB6 /* ViewController.m in Sources */,
+				4442847514F7B16F00135CB6 /* ViewController.mm in Sources */,
+				4442866314F7D07500135CB6 /* lipiengine.cpp in Sources */,
+				4442866514F7D07500135CB6 /* LipiEngineModule.cpp in Sources */,
+				4442866C14F7D07500135CB6 /* LTKShapeRecoConfig.cpp in Sources */,
+				4442866D14F7D07500135CB6 /* LTKShapeRecognizer.cpp in Sources */,
+				4442866E14F7D07500135CB6 /* LTKShapeRecoResult.cpp in Sources */,
+				4442866F14F7D07500135CB6 /* LTKShapeRecoUtil.cpp in Sources */,
+				4442867014F7D07500135CB6 /* LTKShapeSample.cpp in Sources */,
+				4442867114F7D07500135CB6 /* LTKShapeFeatureExtractor.cpp in Sources */,
+				4442867214F7D07500135CB6 /* LTKShapeFeatureExtractorFactory.cpp in Sources */,
+				4442867B14F7D07500135CB6 /* PointFloat.cpp in Sources */,
+				4442867D14F7D07500135CB6 /* PointFloatShapeFeature.cpp in Sources */,
+				4442867E14F7D07500135CB6 /* PointFloatShapeFeatureExtractor.cpp in Sources */,
+				4442868814F7D07500135CB6 /* NN.cpp in Sources */,
+				4442868A14F7D07500135CB6 /* NNAdapt.cpp in Sources */,
+				4442868B14F7D07500135CB6 /* NNShapeRecognizer.cpp in Sources */,
+				4442868C14F7D07500135CB6 /* LTKPreprocessor.cpp in Sources */,
+				4442868D14F7D07500135CB6 /* preprocessing.cpp in Sources */,
+				4442868F14F7D07500135CB6 /* BoxFieldRecognizer.cpp in Sources */,
+				4442869114F7D07500135CB6 /* boxfld.cpp in Sources */,
+				4442869314F7D07500135CB6 /* LTKRecognitionContext.cpp in Sources */,
+				4442869414F7D07500135CB6 /* LTKWordRecoConfig.cpp in Sources */,
+				4442869514F7D07500135CB6 /* LTKWordRecoResult.cpp in Sources */,
+				444286C514F7D18C00135CB6 /* LTKCaptureDevice.cpp in Sources */,
+				444286C614F7D18C00135CB6 /* LTKChannel.cpp in Sources */,
+				444286C714F7D18C00135CB6 /* LTKException.cpp in Sources */,
+				444286C814F7D18C00135CB6 /* LTKScreenContext.cpp in Sources */,
+				444286C914F7D18C00135CB6 /* LTKTrace.cpp in Sources */,
+				444286CA14F7D18C00135CB6 /* LTKTraceFormat.cpp in Sources */,
+				444286CB14F7D18C00135CB6 /* LTKTraceGroup.cpp in Sources */,
+				444286F214F7D1AE00135CB6 /* LTKCheckSumGenerate.cpp in Sources */,
+				444286F314F7D1AE00135CB6 /* LTKConfigFileReader.cpp in Sources */,
+				444286F414F7D1AE00135CB6 /* LTKErrors.cpp in Sources */,
+				444286F514F7D1AE00135CB6 /* LTKImageWriter.cpp in Sources */,
+				444286F614F7D1AE00135CB6 /* LTKInkFileReader.cpp in Sources */,
+				444286F714F7D1AE00135CB6 /* LTKInkFileWriter.cpp in Sources */,
+				444286F814F7D1AE00135CB6 /* LTKInkUtils.cpp in Sources */,
+				444286F914F7D1AE00135CB6 /* LTKLinuxUtil.cpp in Sources */,
+				444286FA14F7D1AE00135CB6 /* LTKLoggerUtil.cpp in Sources */,
+				444286FB14F7D1AE00135CB6 /* LTKOSUtilFactory.cpp in Sources */,
+				444286FC14F7D1AE00135CB6 /* LTKStrEncoding.cpp in Sources */,
+				444286FD14F7D1AE00135CB6 /* LTKStringUtil.cpp in Sources */,
+				444286FE14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp in Sources */,
+				4442870314F7F11E00135CB6 /* FilesConfigurator.m in Sources */,
+				4442877514F8584C00135CB6 /* GTVTransparentTouchView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
