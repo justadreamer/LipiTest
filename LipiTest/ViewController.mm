@@ -31,7 +31,6 @@
 @property (nonatomic,strong) GTVTransparentTouchView* touchView;
 
 - (void) initRecognizer;
-- (char) recognizePoints:(NSArray*)points;
 @end
 
 @implementation ViewController
@@ -229,6 +228,11 @@ LTKScreenContext screenContext;
 #pragma mark GTVTouchViewDelegate
 
 - (void) touchView:(GTVTransparentTouchView *)touchView pointGroupsDidChange:(NSArray *)pointGroups {
+    
+}
+
+- (BOOL) touchView:(GTVTransparentTouchView *)touchView shouldTimerResetPointGroups:(NSArray *)pointGroups {
     [self recognizePointGroups:pointGroups];
+    return YES;
 }
 @end

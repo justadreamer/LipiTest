@@ -16,7 +16,6 @@
 - (void) curveControlPoints:(NSArray*)points first:(NSArray**) firstControlPoints second:(NSArray**)secondControlPoints;
 - (void) firstControlPoints:(double*)x rhs:(double*)rhs n:(int)n;
 - (void) doResetPoints;
-- (void) resetPoints;
 - (void) addPoint:(CGPoint)point;
 - (void) addPointGroup;
 - (void) drawCurveForPoints:(NSArray*)points inRect:(CGRect)rect;
@@ -36,13 +35,17 @@
     [super dealloc];
 }
 
+- (void) initPointGroups {
+    self.pointGroups = [NSMutableArray array];
+}
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.resetTimeInterval = 1;
         self.strokeColor = [UIColor redColor];
-        [self doResetPoints];
+        [self initPointGroups];
     }
     return self;
 }
@@ -176,14 +179,16 @@
     delete [] tmp;
 }              
 
-- (void) notifyDelegate {
+- (void) notifyDelegatePointGroupsDidChange {
     [self.delegate touchView:self pointGroupsDidChange:self.pointGroups];
 }
 
 - (void) doResetPoints {
-    [self notifyDelegate];
-    self.pointGroups = [NSMutableArray array];
-    [self setNeedsDisplay];
+    if ([self.delegate touchView:self shouldTimerResetPointGroups:self.pointGroups]) {
+        [self notifyDelegatePointGroupsDidChange];
+        [self initPointGroups];
+        [self setNeedsDisplay];
+    }
 }
 
 - (void) startResetPointsTimer {
@@ -195,15 +200,11 @@
     self.timer = nil;
 }
 
-- (void) resetPoints {
-    [self startResetPointsTimer];
-}
-
 - (void) addPoint:(CGPoint)point {
     [self stopResetPointsTimer];
     [[self.pointGroups lastObject] addObject:[NSValue valueWithCGPoint:point]];
     [self setNeedsDisplay];
-//    [self notifyDelegate];
+    [self notifyDelegatePointGroupsDidChange];
 }
 
 - (void) addPointGroup {
@@ -217,27 +218,23 @@
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self addPointGroup];
     [self addPointsFromTouches:touches];
-    DLog(@"nextResponder=%@", [self nextResponder]);
     [[self nextResponder] touchesBegan:touches withEvent:event];
 }
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     [self addPointsFromTouches:touches];
-    DLog(@"nextResponder=%@", [self nextResponder]);
     [[self nextResponder] touchesMoved:touches withEvent:event];
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [self addPointsFromTouches:touches];
-    DLog(@"nextResponder=%@", [self nextResponder]);
     [[self nextResponder] touchesEnded:touches withEvent:event];
-    [self resetPoints];
+    [self startResetPointsTimer];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    DLog(@"nextResponder=%@", [self nextResponder]);
     [[self nextResponder] touchesCancelled:touches withEvent:event];
-    [self resetPoints];
+    [self startResetPointsTimer];
 }
 
 @end

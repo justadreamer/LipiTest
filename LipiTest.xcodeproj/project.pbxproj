@@ -14,8 +14,7 @@
 		4442846E14F7B16F00135CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442846D14F7B16F00135CB6 /* main.m */; };
 		4442847214F7B16F00135CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442847114F7B16F00135CB6 /* AppDelegate.m */; };
 		4442847514F7B16F00135CB6 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4442847414F7B16F00135CB6 /* ViewController.mm */; };
-		4442847814F7B17000135CB6 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847614F7B17000135CB6 /* ViewController_iPhone.xib */; };
-		4442847B14F7B17000135CB6 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847914F7B17000135CB6 /* ViewController_iPad.xib */; };
+		4442847814F7B17000135CB6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4442847614F7B17000135CB6 /* ViewController.xib */; };
 		4442866314F7D07500135CB6 /* lipiengine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442860014F7D07400135CB6 /* lipiengine.cpp */; };
 		4442866414F7D07500135CB6 /* lipiengine.def in Resources */ = {isa = PBXBuildFile; fileRef = 4442860114F7D07400135CB6 /* lipiengine.def */; };
 		4442866514F7D07500135CB6 /* LipiEngineModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4442860314F7D07400135CB6 /* LipiEngineModule.cpp */; };
@@ -83,8 +82,7 @@
 		4442847114F7B16F00135CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4442847314F7B16F00135CB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4442847414F7B16F00135CB6 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
-		4442847714F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		4442847A14F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		4442847714F7B17000135CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		4442860014F7D07400135CB6 /* lipiengine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lipiengine.cpp; sourceTree = "<group>"; };
 		4442860114F7D07400135CB6 /* lipiengine.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lipiengine.def; sourceTree = "<group>"; };
 		4442860214F7D07400135CB6 /* lipiengine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lipiengine.h; sourceTree = "<group>"; };
@@ -258,8 +256,7 @@
 				4442847114F7B16F00135CB6 /* AppDelegate.m */,
 				4442847314F7B16F00135CB6 /* ViewController.h */,
 				4442847414F7B16F00135CB6 /* ViewController.mm */,
-				4442847614F7B17000135CB6 /* ViewController_iPhone.xib */,
-				4442847914F7B17000135CB6 /* ViewController_iPad.xib */,
+				4442847614F7B17000135CB6 /* ViewController.xib */,
 				4442846814F7B16F00135CB6 /* Supporting Files */,
 				4442870114F7F11D00135CB6 /* FilesConfigurator.h */,
 				4442870214F7F11D00135CB6 /* FilesConfigurator.m */,
@@ -586,8 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4442846C14F7B16F00135CB6 /* InfoPlist.strings in Resources */,
-				4442847814F7B17000135CB6 /* ViewController_iPhone.xib in Resources */,
-				4442847B14F7B17000135CB6 /* ViewController_iPad.xib in Resources */,
+				4442847814F7B17000135CB6 /* ViewController.xib in Resources */,
 				4442866414F7D07500135CB6 /* lipiengine.def in Resources */,
 				4442867C14F7D07500135CB6 /* PointFloat.def in Resources */,
 				4442868714F7D07500135CB6 /* nn.cfg in Resources */,
@@ -667,20 +663,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4442847614F7B17000135CB6 /* ViewController_iPhone.xib */ = {
+		4442847614F7B17000135CB6 /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4442847714F7B17000135CB6 /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		4442847914F7B17000135CB6 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4442847A14F7B17000135CB6 /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
