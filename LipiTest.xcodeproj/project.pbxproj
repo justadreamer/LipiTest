@@ -64,9 +64,11 @@
 		444286FC14F7D1AE00135CB6 /* LTKStrEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E614F7D1AE00135CB6 /* LTKStrEncoding.cpp */; };
 		444286FD14F7D1AE00135CB6 /* LTKStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286E814F7D1AE00135CB6 /* LTKStringUtil.cpp */; };
 		444286FE14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444286EA14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp */; };
-		4442870314F7F11E00135CB6 /* FilesConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442870214F7F11D00135CB6 /* FilesConfigurator.m */; };
 		4442876A14F83D1A00135CB6 /* projects in Resources */ = {isa = PBXBuildFile; fileRef = 4442876914F83D1A00135CB6 /* projects */; };
 		4442877514F8584C00135CB6 /* GTVTransparentTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4442877414F8584C00135CB6 /* GTVTransparentTouchView.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4442877A14FA588900135CB6 /* LipiFilesConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442877814FA588900135CB6 /* LipiFilesConfigurator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4442877D14FA5A0000135CB6 /* LipiCharRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4442877C14FA5A0000135CB6 /* LipiCharRecognizer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4442878114FB710E00135CB6 /* LipiCharRecognizerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4442878014FB710D00135CB6 /* LipiCharRecognizerResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,14 +196,20 @@
 		444286E914F7D1AE00135CB6 /* LTKStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKStringUtil.h; sourceTree = "<group>"; };
 		444286EA14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTKVersionCompatibilityCheck.cpp; sourceTree = "<group>"; };
 		444286EB14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKVersionCompatibilityCheck.h; sourceTree = "<group>"; };
-		4442870114F7F11D00135CB6 /* FilesConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesConfigurator.h; sourceTree = "<group>"; };
-		4442870214F7F11D00135CB6 /* FilesConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesConfigurator.m; sourceTree = "<group>"; };
 		4442876914F83D1A00135CB6 /* projects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = projects; sourceTree = "<group>"; };
 		4442876B14F83DC400135CB6 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		4442876C14F83E0700135CB6 /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLog.h; sourceTree = "<group>"; };
 		4442877214F8584C00135CB6 /* GTVGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVGlobals.h; sourceTree = "<group>"; };
 		4442877314F8584C00135CB6 /* GTVTransparentTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVTransparentTouchView.h; sourceTree = "<group>"; };
 		4442877414F8584C00135CB6 /* GTVTransparentTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GTVTransparentTouchView.mm; sourceTree = "<group>"; };
+		4442877814FA588900135CB6 /* LipiFilesConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LipiFilesConfigurator.m; sourceTree = "<group>"; };
+		4442877914FA588900135CB6 /* LipiFilesConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LipiFilesConfigurator.h; sourceTree = "<group>"; };
+		4442877B14FA5A0000135CB6 /* LipiCharRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LipiCharRecognizer.h; sourceTree = "<group>"; };
+		4442877C14FA5A0000135CB6 /* LipiCharRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LipiCharRecognizer.mm; sourceTree = "<group>"; };
+		4442877E14FB6EF200135CB6 /* LipiCharRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LipiCharRecognizerDelegate.h; sourceTree = "<group>"; };
+		4442877F14FB710C00135CB6 /* LipiCharRecognizerResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LipiCharRecognizerResult.h; sourceTree = "<group>"; };
+		4442878014FB710D00135CB6 /* LipiCharRecognizerResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LipiCharRecognizerResult.m; sourceTree = "<group>"; };
+		44A9559F14FBAEAA00CCC1B4 /* GTVTransparentTouchViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVTransparentTouchViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +256,7 @@
 		4442846714F7B16F00135CB6 /* LipiTest */ = {
 			isa = PBXGroup;
 			children = (
+				4442877714FA585600135CB6 /* LipiCharRecognizer */,
 				4442877114F8584900135CB6 /* GestureTouchView */,
 				4442876C14F83E0700135CB6 /* DLog.h */,
 				4442870414F80F5300135CB6 /* res */,
@@ -258,8 +267,6 @@
 				4442847414F7B16F00135CB6 /* ViewController.mm */,
 				4442847614F7B17000135CB6 /* ViewController.xib */,
 				4442846814F7B16F00135CB6 /* Supporting Files */,
-				4442870114F7F11D00135CB6 /* FilesConfigurator.h */,
-				4442870214F7F11D00135CB6 /* FilesConfigurator.m */,
 				4442876B14F83DC400135CB6 /* Global.h */,
 			);
 			path = LipiTest;
@@ -528,8 +535,23 @@
 				4442877214F8584C00135CB6 /* GTVGlobals.h */,
 				4442877314F8584C00135CB6 /* GTVTransparentTouchView.h */,
 				4442877414F8584C00135CB6 /* GTVTransparentTouchView.mm */,
+				44A9559F14FBAEAA00CCC1B4 /* GTVTransparentTouchViewDelegate.h */,
 			);
 			path = GestureTouchView;
+			sourceTree = "<group>";
+		};
+		4442877714FA585600135CB6 /* LipiCharRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				4442877814FA588900135CB6 /* LipiFilesConfigurator.m */,
+				4442877914FA588900135CB6 /* LipiFilesConfigurator.h */,
+				4442877B14FA5A0000135CB6 /* LipiCharRecognizer.h */,
+				4442877C14FA5A0000135CB6 /* LipiCharRecognizer.mm */,
+				4442877E14FB6EF200135CB6 /* LipiCharRecognizerDelegate.h */,
+				4442877F14FB710C00135CB6 /* LipiCharRecognizerResult.h */,
+				4442878014FB710D00135CB6 /* LipiCharRecognizerResult.m */,
+			);
+			path = LipiCharRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,8 +669,10 @@
 				444286FC14F7D1AE00135CB6 /* LTKStrEncoding.cpp in Sources */,
 				444286FD14F7D1AE00135CB6 /* LTKStringUtil.cpp in Sources */,
 				444286FE14F7D1AE00135CB6 /* LTKVersionCompatibilityCheck.cpp in Sources */,
-				4442870314F7F11E00135CB6 /* FilesConfigurator.m in Sources */,
 				4442877514F8584C00135CB6 /* GTVTransparentTouchView.mm in Sources */,
+				4442877A14FA588900135CB6 /* LipiFilesConfigurator.m in Sources */,
+				4442877D14FA5A0000135CB6 /* LipiCharRecognizer.mm in Sources */,
+				4442878114FB710E00135CB6 /* LipiCharRecognizerResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,10 +759,14 @@
 		4442848014F7B17000135CB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LipiTest/LipiTest-Prefix.pch";
 				INFOPLIST_FILE = "LipiTest/LipiTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -762,6 +790,7 @@
 				4442848014F7B17000135CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

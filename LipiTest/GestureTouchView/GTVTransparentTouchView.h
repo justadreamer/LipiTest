@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class GTVTransparentTouchView;
-
-@protocol GTVTransparentTouchViewDelegate 
-- (void) touchView:(GTVTransparentTouchView*)touchView pointGroupsDidChange:(NSArray*)pointGroups;
-- (BOOL) touchView:(GTVTransparentTouchView*)touchView shouldTimerResetPointGroups:(NSArray*)pointGroups;
-@end
+#import "GTVTransparentTouchViewDelegate.h"
 
 @interface GTVTransparentTouchView : UIView {
     

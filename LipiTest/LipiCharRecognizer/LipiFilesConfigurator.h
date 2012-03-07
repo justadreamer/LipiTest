@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FilesConfigurator : NSObject
+@interface LipiFilesConfigurator : NSObject
 - (void) setupPaths;
 @property (nonatomic,strong) NSString* rootDir;
 @end

@@ -179,15 +179,15 @@
     delete [] tmp;
 }              
 
-- (void) notifyDelegatePointGroupsDidChange {
-    [self.delegate touchView:self pointGroupsDidChange:self.pointGroups];
+- (void) resetPointGroups {
+    [self initPointGroups];
+    [self setNeedsDisplay];
+    [self.delegate touchViewDidResetPointGroups:self];
 }
 
 - (void) doResetPoints {
     if ([self.delegate touchView:self shouldTimerResetPointGroups:self.pointGroups]) {
-        [self notifyDelegatePointGroupsDidChange];
-        [self initPointGroups];
-        [self setNeedsDisplay];
+        [self resetPointGroups];
     }
 }
 
@@ -204,7 +204,7 @@
     [self stopResetPointsTimer];
     [[self.pointGroups lastObject] addObject:[NSValue valueWithCGPoint:point]];
     [self setNeedsDisplay];
-    [self notifyDelegatePointGroupsDidChange];
+    [self.delegate touchView:self pointGroupsDidChange:self.pointGroups];
 }
 
 - (void) addPointGroup {

@@ -8,214 +8,77 @@
 
 #import "ViewController.h"
 #import "Global.h"
-
-#include "LTKLoggerUtil.h"
-#include "LTKErrors.h"
-#include "LTKOSUtilFactory.h"
-#include "LTKOSUtil.h"
-#include "lipiengine.h"
-#include "NNShapeRecognizer.h"
-#include "LTKTrace.h"
-
-#import "FilesConfigurator.h"
+#import "LipiCharRecognizer.h"
 #import "GTVTransparentTouchView.h"
-
-#define ENG_ALPHANUMERIC "ENG_ALPHANUMERIC"
-#define ENG_LOWER "ENG_LOWER"
-#define ENG_UPPER "ENG_UPPER"
-
+#import "LipiCharRecognizerResult.h"
 #define LOGICAL_PROJECT_NAME ENG_UPPER
 
-@interface ViewController()<GTVTransparentTouchViewDelegate>
-@property (nonatomic,strong) FilesConfigurator* filesConfigurator;
-@property (nonatomic,strong) GTVTransparentTouchView* touchView;
+@interface ViewController()<GTVTransparentTouchViewDelegate, LipiCharRecognizerDelegate>
 
-- (void) initRecognizer;
+@property (nonatomic,strong) LipiCharRecognizer* charRecognizerUpper;
+@property (nonatomic,strong) LipiCharRecognizer* charRecognizerLower;
+@property (nonatomic,assign) int startedRecognizers;
+@property (nonatomic,strong) NSMutableArray* touchViews;
+- (void) initRecognizers;
+- (void) initTouchViews;
+
+- (void) recognizerStarted;
+- (void) recognizerFinished;
+- (BOOL) allRecognizersFinished;
 @end
 
 @implementation ViewController
-@synthesize filesConfigurator;
-@synthesize touchView;
-@synthesize shapeLabel;
+@synthesize charRecognizerUpper;
+@synthesize charRecognizerLower;
+@synthesize startedRecognizers;
+@synthesize touchViews;
+
+@synthesize shapeLabel1;
+@synthesize shapeLabel2;
 @synthesize activityIndicator;
+@synthesize square50x50;
+@synthesize square75x75;
+@synthesize square100x100;
+@synthesize square125x125;
+@synthesize square150x150;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    [self initRecognizer];
-    self.touchView = [[GTVTransparentTouchView alloc] initWithFrame:self.view.bounds];
-    self.touchView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.touchView.delegate = self;
-    [self.view addSubview:self.touchView];
+    [self initRecognizers];
+    [self initTouchViews];
+    self.shapeLabel1.numberOfLines = 0;
+    self.shapeLabel2.numberOfLines = 0;
 }
 
-LTKOSUtil* utilPtr = LTKOSUtilFactory::getInstance();
-LTKShapeRecognizer *pShapeReco = NULL;
-LTKLipiEngineInterface *ptrObj = NULL;
-LTKScreenContext screenContext;
+#define ADD_TOUCH_VIEW(s) UIView* v##s = [[GTVTransparentTouchView alloc] initWithFrame:self.square##s##x##s.frame]; \
+[self.touchViews addObject:v##s]; \
+v##s.tag = s;
 
-- (void) initRecognizer {
-    self.filesConfigurator = [[FilesConfigurator alloc] init];
-    //create an instance of LipiEngine Module
-    ptrObj = createLTKLipiEngine();
-    const char* rootPath = [self.filesConfigurator.rootDir cStringUsingEncoding:NSUTF8StringEncoding];
-	ptrObj->setLipiRootPath(rootPath);
-    
-	//Initialize the LipiEngine module
-	int iResult = ptrObj->initializeLipiEngine();
-	if(iResult != SUCCESS) {
-		cout << iResult <<": Error initializing LipiEngine." << endl;
-        delete utilPtr;
-		return;
-	}
-	//Assign the logical name of the project to this string, i.e. TAMIL_CHAR 
-	//(or) "HINDI_GESTURES"
-	string strLogicalProjectName = string(LOGICAL_PROJECT_NAME);
-    string strProjectName = "";
-    string strProfileName = "";
-    
-	// Resolve the logical name into project name and profile name
-	ptrObj->resolveLogicalNameToProjectProfile(strLogicalProjectName,
-                                               strProjectName,
-                                               strProfileName);
-    
-    int iMajor, iMinor, iBugfix;
-    
-    getToolkitVersion(iMajor, iMinor, iBugfix);
-    char currentVersion[VERSION_STR_LEN];
-	sprintf(currentVersion, "%d.%d.%d", iMajor, iMinor, iBugfix);
-    
-    LTKControlInfo controlInfo;
-    controlInfo.lipiRoot = rootPath;
-    controlInfo.projectName = strProjectName;
-    controlInfo.profileName = strProfileName;
-    controlInfo.toolkitVersion = currentVersion;
-    
-    pShapeReco = new NNShapeRecognizer(controlInfo);
-	if(pShapeReco == NULL)
-	{
-		cout << endl << "Error creating Shape Recognizer" << endl;
-        delete utilPtr;
-        return;
-	}
-    
-	iResult = pShapeReco->loadModelData();
-	if(iResult != SUCCESS)
-	{
-		cout << endl << iResult << ": Error loading Model data." << endl;
-		ptrObj->deleteShapeRecognizer(pShapeReco);
-        delete utilPtr;
-		return;
-	}
-    
-	//Declare variables to be used for recognition...
-	LTKCaptureDevice captureDevice;
-    captureDevice.setSamplingRate(10);
-	captureDevice.setXDPI(132);
-	captureDevice.setYDPI(132);
-	captureDevice.setLatency(10);
-	captureDevice.setUniformSampling(true);
-    
-	//	Set the device context, once before starting the recognition...
-	pShapeReco->setDeviceContext(captureDevice);
-}
-
-- (void) destroyRecognizer {
-    if (NULL!=ptrObj) {
-        ptrObj->deleteShapeRecognizer(pShapeReco);
-        delete ptrObj;
-    }
-    if (NULL!=utilPtr) {
-        delete utilPtr;
+- (void) initTouchViews {
+    self.touchViews = [NSMutableArray array];
+    ADD_TOUCH_VIEW(50)
+    ADD_TOUCH_VIEW(75)
+    ADD_TOUCH_VIEW(100)
+    ADD_TOUCH_VIEW(125)
+    ADD_TOUCH_VIEW(150)
+    for (GTVTransparentTouchView* touchView in self.touchViews) {
+        touchView.delegate = self;
+        UILabel* label = [[UILabel alloc] initWithFrame:touchView.frame];
+        label.text = [NSString stringWithFormat:@"%dx%d",touchView.tag,touchView.tag];
+        [self.view addSubview:label];
+        [self.view addSubview:touchView];
     }
 }
 
-- (void) initScreenContext {
-    screenContext.setBboxTop(0);
-    screenContext.setBboxBottom(self.view.bounds.size.height);
-    screenContext.setBboxLeft(0);
-    screenContext.setBboxRight(self.view.bounds.size.width);
-    for (float x=0;x<self.view.bounds.size.width;x++) {
-        screenContext.addVLine(x);
-    }
-    for (float y=0;y<self.view.bounds.size.height;y++) {
-        screenContext.addHLine(y);
-    }
+- (void) initRecognizers {
+    self.charRecognizerUpper = [[LipiCharRecognizer alloc] initWithRecognizerType:LIPI_ENG_UPPER];
+    self.charRecognizerUpper.delegate = self;
+    
+    self.charRecognizerLower = [[LipiCharRecognizer alloc] initWithRecognizerType:LIPI_ENG_LOWER];
+    self.charRecognizerLower.delegate = self;
 }
 
-- (void) viewWillAppear:(BOOL)animated {
-    [self initScreenContext];
-}
-
-- (void) refreshRecognizedShapeId:(int)shapeId {
-    char c;
-    const int smallLetterBound = ((int)'z'-(int)'a');
-    if (0==strcmp(ENG_ALPHANUMERIC, LOGICAL_PROJECT_NAME)) {
-        int digitsBound = smallLetterBound+10;
-        if (shapeId<=smallLetterBound) {
-            c = 'a'+shapeId;
-        } else if (shapeId<=digitsBound) {
-            c = '0'+shapeId-smallLetterBound-1;
-        } else {
-            c = 'A'+shapeId-digitsBound-1;
-        }
-    } else if (0==strcmp(ENG_LOWER,LOGICAL_PROJECT_NAME)) {
-        c = 'a'+shapeId;
-    } else if (0==strcmp(ENG_UPPER, LOGICAL_PROJECT_NAME)) {
-        c = 'A'+shapeId;
-    }
-    self.shapeLabel.text = [NSString stringWithFormat:@"%c",c];
-}
-
-- (void) recognizePointGroups:(NSArray *)pointGroups {
-    [self.activityIndicator startAnimating];
-    GCD_BKG_BLOCK
-        vector<int> shapeSubset; 
-        int numChoices = 2;
-        float confThreshold = 0.0f;
-        vector<LTKShapeRecoResult> results;
-        LTKTraceGroup inTraceGroup;
-
-        for (NSArray* points in pointGroups) {
-            LTKTrace trace;        
-            for (NSValue* val in points) {
-                CGPoint pt = [val CGPointValue];
-                vector<float> coord;
-                coord.push_back(pt.x);
-                coord.push_back(pt.y);
-                trace.addPoint(coord);
-            }
-            inTraceGroup.addTrace(trace);
-        }
-
-        results.reserve(numChoices);
-
-        int iResult = pShapeReco->recognize(inTraceGroup, screenContext, shapeSubset, confThreshold, numChoices, results);
-        GCD_MAIN_BLOCK
-            if (SUCCESS ==iResult) {
-                float maxConfidence = 0;
-                int maxConfidenceIndex = 0;
-                for (int i=0;i<results.size();i++) {
-                    float confidence = results.at(i).getConfidence();
-                    if (confidence>maxConfidence) {
-                        maxConfidence = confidence;
-                        maxConfidenceIndex = i;
-                    }
-                }
-                [self refreshRecognizedShapeId:results.at(maxConfidenceIndex).getShapeId()];
-            }
-            [self.activityIndicator stopAnimating];
-        GCD_END_BLOCK
-    GCD_END_BLOCK
-}
-
-- (void) viewDidUnload {
-    [self destroyRecognizer];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -232,7 +95,56 @@ LTKScreenContext screenContext;
 }
 
 - (BOOL) touchView:(GTVTransparentTouchView *)touchView shouldTimerResetPointGroups:(NSArray *)pointGroups {
-    [self recognizePointGroups:pointGroups];
+    self.charRecognizerUpper.bounds = touchView.bounds;
+    [self.charRecognizerUpper recognizePointGroups:pointGroups];
+    self.charRecognizerLower.bounds = touchView.bounds;
+    [self.charRecognizerLower recognizePointGroups:pointGroups];
     return YES;
+}
+
+- (void) touchViewDidResetPointGroups:(GTVTransparentTouchView *)touchView {
+    
+}
+
+#pragma mark -
+#pragma mark LipiCharRecognizer
+
+- (void) lipiCharRecognizerDidStart:(LipiCharRecognizer *)recognizer {
+    [self recognizerStarted];
+    [self.activityIndicator startAnimating];
+}
+
+- (void) lipiCharRecognizer:(LipiCharRecognizer*)recognizer didRecognize:(NSArray *)results {
+    NSString* text = @"";
+    for (LipiCharRecognizerResult* result in results) {
+        text = [text stringByAppendingFormat:@"%c %.2f\n",result.recognizedChar, result.confidenceLevel];
+    }
+
+    UILabel* label = self.shapeLabel1;
+    if (self.charRecognizerUpper == recognizer) {
+        label = self.shapeLabel2;
+    }
+    label.text = text;
+}
+
+- (void) lipiCharRecognizerDidFinish:(LipiCharRecognizer *)recognizer {
+    [self recognizerFinished];
+    if ([self allRecognizersFinished]) {
+        [self.activityIndicator stopAnimating];
+    }
+}
+
+#pragma mark - 
+#pragma mark recognizers management
+- (void) recognizerStarted {
+    self.startedRecognizers++;
+}
+
+- (void) recognizerFinished {
+    self.startedRecognizers--;
+}
+
+- (BOOL) allRecognizersFinished {
+    return self.startedRecognizers <= 0;
 }
 @end

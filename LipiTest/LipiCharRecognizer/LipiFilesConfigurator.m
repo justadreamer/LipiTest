@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 #import "Global.h"
-#import "FilesConfigurator.h"
+#import "LipiFilesConfigurator.h"
 
-@implementation FilesConfigurator
+@implementation LipiFilesConfigurator
 @synthesize rootDir;
 - (id) init {
     if ((self = [super init])) {
@@ -30,18 +30,16 @@
 
 - (void) setupPaths {
     self.rootDir = [self applicationSupportDirectory];
-    NSString* pathToProjects = [[NSBundle mainBundle] resourcePath];
-    NSString* projectsComponent = @"projects";
-    pathToProjects = [pathToProjects stringByAppendingPathComponent:projectsComponent];
+    NSString* projects = @"projects";
+    NSString* fromPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:projects];
+    NSString* toPath = [self.rootDir stringByAppendingPathComponent:projects];
 
-    NSString* toPath = [self.rootDir stringByAppendingPathComponent:projectsComponent];
-    NSError* deleteErr = nil;
-    if (![[NSFileManager defaultManager] removeItemAtPath:toPath error:&deleteErr]) {
-        VLog(deleteErr);
-    }
-    NSError* copyErr = nil;
-    if (![[NSFileManager defaultManager] copyItemAtPath:pathToProjects toPath:toPath error:&copyErr]) {
-        VLog(copyErr);
+    if (![[NSFileManager defaultManager] fileExistsAtPath:toPath]) {
+        NSError* copyErr = nil;
+        if (![[NSFileManager defaultManager] copyItemAtPath:fromPath toPath:toPath error:&copyErr]) {
+            VLog(copyErr);
+        }
     }
 }
+
 @end
